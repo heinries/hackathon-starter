@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <title>Houston Hackathon Template Questionnaire</title>
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html"><img src="logo.png" alt="Houston Hackathon 2026 placeholder logo" class="logo"></a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="questionnaire.html">Questionnaire</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Houston Hackathon 2026 Questionnaire</h1>
+      <p>This reusable demo shows how a hackathon project could collect user information for database storage, data analysis, model predictions, subscriptions, or project-specific services.</p>
+    </section>
+
+    <!-- Planned architecture: Browser form -> Flask API -> SQLite/database -> analysis/model/notification service -->
+    <form id="questionnaire-form">
+      <section aria-labelledby="basic-information-heading">
+        <h2 id="basic-information-heading">Tell Us About Yourself</h2>
+        <p class="form-note">Fields marked (required) must be completed.</p>
+        <div class="form-field">
+          <label for="first-name">First Name (required)</label>
+          <input type="text" id="first-name" name="first_name" placeholder="Your first name" autocomplete="given-name" required>
+        </div>
+        <div class="form-field">
+          <label for="last-name">Last Name (required)</label>
+          <input type="text" id="last-name" name="last_name" placeholder="Your last name" autocomplete="family-name" required>
+        </div>
+        <div class="form-field">
+          <label for="email">Email Address (required)</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+        </div>
+        <div class="form-field">
+          <label for="phone">Phone Number (optional)</label>
+          <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" autocomplete="tel">
+        </div>
+        <div class="form-field">
+          <label for="zip-code">ZIP Code (required, 5 digits)</label>
+          <input type="text" id="zip-code" name="zip_code" placeholder="5-digit ZIP code" inputmode="numeric" maxlength="5" pattern="[0-9]{5}" autocomplete="postal-code" required>
+        </div>
+      </section>
+
+      <section aria-labelledby="project-questions-heading">
+        <h2 id="project-questions-heading">Project Questions</h2>
+        <!-- Replace these generic example questions with project-specific questions during the hackathon. -->
+        <div class="form-field">
+          <label for="service-reason">What best describes your reason for using this service?</label>
+          <select id="service-reason" name="service_reason">
+            <option value="">Select an option</option>
+            <option value="information">I need information</option>
+            <option value="assistance">I need assistance</option>
+            <option value="volunteer">I want to volunteer</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <fieldset class="checkbox-group">
+          <legend>What topics are you interested in?</legend>
+          <div class="checkbox-option">
+            <input type="checkbox" id="interest-community" name="interests" value="community">
+            <label for="interest-community">Community</label>
+          </div>
+          <div class="checkbox-option">
+            <input type="checkbox" id="interest-transportation" name="interests" value="transportation">
+            <label for="interest-transportation">Transportation</label>
+          </div>
+          <div class="checkbox-option">
+            <input type="checkbox" id="interest-emergency" name="interests" value="emergency_preparedness">
+            <label for="interest-emergency">Emergency Preparedness</label>
+          </div>
+          <div class="checkbox-option">
+            <input type="checkbox" id="interest-events" name="interests" value="events">
+            <label for="interest-events">Events</label>
+          </div>
+          <div class="checkbox-option">
+            <input type="checkbox" id="interest-other" name="interests" value="other">
+            <label for="interest-other">Other</label>
+          </div>
+        </fieldset>
+        <div class="form-field">
+          <label for="additional-information">Tell us more</label>
+          <textarea id="additional-information" name="additional_information" rows="4" placeholder="Share any additional details."></textarea>
+        </div>
+      </section>
+
+      <section aria-labelledby="stay-informed-heading">
+        <h2 id="stay-informed-heading">Stay Informed</h2>
+        <fieldset class="checkbox-group">
+          <legend>Communication preferences (optional)</legend>
+          <div class="checkbox-option">
+            <input type="checkbox" id="email-updates" name="email_updates" value="yes">
+            <label for="email-updates">Email updates</label>
+          </div>
+          <div class="checkbox-option">
+            <input type="checkbox" id="sms-updates" name="sms_updates" value="yes" aria-describedby="sms-consent">
+            <label for="sms-updates">SMS updates</label>
+          </div>
+          <p class="form-note" id="sms-consent">By selecting SMS updates, you agree to receive project-related text messages. Message and data rates may apply.</p>
+        </fieldset>
+      </section>
+
+      <!-- Enable this button when the Flask backend/database connection is implemented. -->
+      <button type="submit" disabled>Submit</button>
+      <p class="form-note">Demo form — data submission will be enabled when the backend is connected.</p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p><strong>Houston Hackathon 2026 Starter Template</strong></p>
+    <p>Built as a reusable prototype for hackathon development.</p>
+    <nav aria-label="Footer navigation">
+      <a href="index.html">Home</a>
+      <a href="questionnaire.html">Questionnaire</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p>Released under the <a href="../LICENSE">MIT License</a>.</p>
+    <p>© 2026 Hackathon Project Team</p>
+    <div class="footer-disclaimer">
+      <p>Prototype disclaimer: This website is a demonstration project. Information, calculations, recommendations, alerts, and outputs should be independently verified before being used for safety-critical, professional, legal, medical, engineering, emergency-response, or other regulated decisions.</p>
+      <p>Any standards, codes, regulations, datasets, APIs, or third-party services referenced by a future project remain subject to their respective owners, terms, and current requirements.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,85 @@
+Hackathon prep — tonight
+- [ ] 1. Create a new GitHub repository
+  - Suggested name: hackathon-starter
+  - Add a README
+  - Add .gitignore for Python
+  - MIT licence is fine for a reusable starter
+  - Clone it to your desktop
+- [ ] 2. Create the DigitalOcean VM
+  - Basic Droplet
+  - Ubuntu 24.04 LTS
+  - 1 vCPU / 1 GB RAM / 25 GB SSD — ~$6/month tier
+  - SSH key authentication
+  - Record the server's IP address
+- [ ] 3. Secure and configure the VM
+  - Update packages
+  - Create/configure non-root access
+  - Enable firewall
+  - Allow SSH, HTTP and HTTPS
+  - Install Git
+  - Install Python + venv
+  - Install Nginx
+- [ ] 4. Connect GitHub → VM
+  - Clone hackathon-starter onto VM
+  - Establish a simple deployment workflow:
+Desktop
+   │
+   │ git push
+   ▼
+GitHub
+   │
+   │ git pull
+   ▼
+DigitalOcean VM
+   │
+   ├── Website
+   ├── Python API
+   └── Dashboard
+
+- [ ] 5. Build generic website
+  - Home
+  - About
+  - Project/problem section
+  - Contact
+  - Responsive/mobile layout
+  - Grayscale placeholder design
+  - Deploy publicly on VM
+- [ ] 6. Create basic Python backend
+  - Flask
+  - / website
+  - /dashboard
+  - /api/...
+  - SQLite if we need persistent data
+  - Get Flask running behind Nginx
+- [ ] 7. Build notification proof-of-concept
+  - Choose SMS provider
+  - Create account/API credentials
+  - Send one test SMS
+  - Keep SMS module independent so tomorrow's project can call something simple like:
+send_sms(phone_number, message)
+
+
+- [ ] 8. Prepare hackathon project tools
+  - IDEA_CANVAS.md
+  - TODO.md
+  - communication workflow
+  - simple project schedule
+  - README template
+- [ ] 9. Prepare presentation
+  - Title
+  - Problem
+  - Users
+  - Solution
+  - Architecture
+  - Demo
+  - Impact
+  - Next steps
+- [ ] 10. Final test tonight
+  - Clone repo cleanly
+  - Website reachable from phone
+  - Dashboard reachable
+  - Git push → VM pull works
+  - Python works
+  - SMS test works
+  - Record credentials safely
+  - Make sure nothing secret/API-related is committed to GitHub
