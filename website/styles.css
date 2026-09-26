@@ -219,3 +219,122 @@ footer>p{flex:1;min-width:180px}
 
 
 button:disabled{opacity:.6;cursor:not-allowed}
+
+/* About: restrained field-notebook details, scoped away from demo controls. */
+.about-page .notebook-label {
+  display: inline-block;
+  padding: 8px 12px;
+  border-left: 3px solid var(--brown);
+  background: #eeeddf;
+}
+.about-page .notebook-figure { margin: 0; min-width: 0; }
+.about-page .notebook-figure figcaption {
+  padding: 12px 0;
+  border-bottom: 1px dashed #b8c2ae;
+  color: var(--muted);
+  font: 11px/1.6 monospace;
+}
+.about-page .anole-field-note {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed #b8c2ae;
+}
+.about-page .anole-field-note img { width: 100px; height: auto; flex-shrink: 0; }
+.about-page .anole-field-note p { margin: 0; font-size: 14px; }
+.about-page .capability-notes {
+  margin-bottom: 64px;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--brown);
+  border-radius: 4px 4px 12px 12px;
+  background: var(--paper);
+}
+.about-page .capability-notes h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); }
+.about-page .capability-grid,
+.about-page .people-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; }
+.about-page .capability-grid h3 { font-size: 19px; }
+.about-page .capability-grid p { font-size: 15px; }
+.about-page .note-dot { display: inline-block; width: 9px; height: 9px; margin-right: 8px; background: var(--leaf); }
+.about-page .future-dot { background: var(--gold); }
+.about-page .independent-note { margin: 6px 0 0; padding-top: 16px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
+.about-page .template-note { position: relative; border-top: 3px solid var(--marker, var(--leaf)); }
+.about-page .template-note > span { color: var(--ink); }
+.about-page .template-note > span::before { content: ''; display: inline-block; width: 8px; height: 8px; background: var(--marker, var(--leaf)); margin-right: 10px; }
+.about-page .template-lighting { --marker: var(--brown); }
+.about-page .template-preparedness { --marker: var(--blue); }
+.about-page .template-spaces { --marker: var(--gold); }
+.about-page .template-note a { padding-block: 10px; min-height: 44px; }
+.about-page .people-section { padding-block: 64px 32px; }
+.about-page .people-heading { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.about-page .trail-mark {
+  display: block;
+  flex: 0 0 100px;
+  height: 52px;
+  border: 2px dashed #b9ad91;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-radius: 0 50% 50% 50%;
+  transform: rotate(-18deg);
+  margin-right: 16px;
+}
+.about-page .person-card { padding: 28px; border: 1px solid var(--line); border-radius: 10px; background: var(--paper); }
+.about-page .person-initials { display: grid; place-items: center; width: 44px; height: 44px; margin-bottom: 24px; background: #eddfd4; color: var(--brown); font: bold 13px monospace; border-radius: 4px 12px 4px 4px; }
+.about-page .advisor-initials { background: #d9e8e7; color: var(--blue); }
+.about-page .person-card h3 { margin-bottom: 8px; font-size: 24px; }
+.about-page .person-card .person-role { color: var(--green); font-size: 13px; font-weight: bold; margin-bottom: 22px; }
+.about-page .person-card p { font-size: 15px; }
+.about-page .person-card .text-link { margin-top: 4px; min-height: 44px; }
+.about-page .end-banner { margin-inline: 0; margin-bottom: 12px; }
+.about-page .end-banner .eyebrow { margin-bottom: 12px; }
+@media (max-width: 720px) {
+  .about-page .capability-notes { padding: 22px; margin-bottom: 40px; }
+  .about-page .capability-grid,
+  .about-page .people-grid { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .about-page .capability-grid > div + div { border-top: 1px dashed #b8c2ae; padding-top: 20px; }
+  .about-page .anole-field-note { align-items: flex-start; gap: 10px; }
+  .about-page .anole-field-note img { width: 72px; }
+  .about-page .people-section { padding-block: 40px 20px; }
+  .about-page .people-heading { display: block; }
+  .about-page .trail-mark { width: 70px; height: 30px; margin: 0 12px 25px auto; }
+  .about-page .person-card { padding: 22px; }
+}
+
+/* Explore map milestone; the static observation list is always available. */
+.official-source { border: 1px solid #a8c5c5; border-left: 4px solid var(--blue); border-radius: 8px; padding: 20px; background: #e5eeea; margin-bottom: 30px; }
+.official-source .eyebrow { margin-bottom: 2px; }
+.official-source .text-link { font-size: 18px; }
+.official-source p:last-child { font-size: 13px; margin: 5px 0 0; }
+.community-heading { font-size: 27px; }
+.map-column { min-width: 0; }
+.map-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
+.map-toolbar button { border: 1px solid var(--line); border-radius: 6px; background: var(--paper); color: var(--green); padding: 10px 14px; min-height: 44px; font-size: 13px; }
+.interactive-map { height: 510px; width: 100%; border: 1px solid #b9c7b2; border-radius: 12px; background: #e5e9dd; z-index: 0; font-family: Arial, Helvetica, sans-serif; }
+.map-fallback { padding: 25px; font-size: 14px; }
+.map-column > .small { margin-top: 12px; }
+.interactive-map .leaflet-control-zoom a { width: 44px; height: 44px; line-height: 44px; color: var(--green); }
+.interactive-map .leaflet-control-attribution { font-size: 11px; color: #26372f; background: #fffdf6; }
+.anole-map-marker { display: grid; place-items: center; border: 3px solid var(--paper); border-radius: 50% 50% 50% 8px; box-shadow: 0 3px 8px #26372f40; font: bold 14px monospace; }
+.anole-map-marker.walkways { background: #e3e9d7; color: var(--green); }
+.interactive-map .leaflet-popup-content { line-height: 1.5; font-size: 13px; }
+.interactive-map .leaflet-popup-content p { margin: 10px 0; }
+.interactive-map .leaflet-popup-content a { display: inline-block; padding-block: 12px; }
+.interactive-map a.leaflet-popup-close-button { width: 44px; height: 44px; font-size: 24px; }
+.interactive-map .leaflet-popup-content-wrapper { background: var(--paper); color: var(--ink); padding-top: 18px; }
+.observation .observation-meta { margin: 12px 0 8px; font-size: 12px; }
+.observation .follow-up { border-top: 1px dashed var(--line); padding-top: 9px; margin-bottom: 0; font-size: 12px; }
+@media (max-width: 720px) {
+  .interactive-map { height: 370px; }
+  .map-toolbar .eyebrow { font-size: 9px; }
+  .official-source { padding: 16px; }
+}
+
+/* Provenance labels distinguish sources without implying imported records exist. */
+.source-key { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 0 0 30px; }
+.source-key p { margin: 0; padding: 15px; border: 1px solid var(--line); border-top: 3px solid var(--blue); border-radius: 6px; background: var(--paper); font-size: 13px; }
+.source-key strong, .source-key span { display: block; }
+.source-key span { margin-top: 6px; color: var(--muted); }
+.source-key .source-listing { border-top-color: var(--brown); border-top-style: dashed; }
+.source-key .source-community { border-top-color: var(--leaf); background: #eef0e3; }
+@media (max-width: 720px) { .source-key { grid-template-columns: minmax(0, 1fr); gap: 8px; } }
