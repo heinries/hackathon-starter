@@ -1,137 +1,101 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap">
-  <link rel="stylesheet" href="styles.css">
-  <title>Houston Hackathon Template Questionnaire</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f8f4e9">
+<meta name="description" content="Anole: a Houston community observation concept. Notice your neighbourhood.">
+<title>Capture preview · Anole</title>
+<link rel="icon" href="assets/anole.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer>
+</script>
 </head>
 <body>
-
-  <header class="site-header">
-    <a href="index.html"><img src="logo.png" alt="Houston Hackathon 2026 placeholder logo" class="logo"></a>
-    <nav aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="questionnaire.html">Questionnaire</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero">
-      <h1>Houston Hackathon 2026 Questionnaire</h1>
-      <p>This reusable demo shows how a hackathon project could collect user information for database storage, data analysis, model predictions, subscriptions, or project-specific services.</p>
-    </section>
-
-    <!-- Planned architecture: Browser form -> Flask API -> SQLite/database -> analysis/model/notification service -->
-    <form id="questionnaire-form">
-      <section aria-labelledby="basic-information-heading">
-        <h2 id="basic-information-heading">Tell Us About Yourself</h2>
-        <p class="form-note">Fields marked (required) must be completed.</p>
-        <div class="form-field">
-          <label for="first-name">First Name (required)</label>
-          <input type="text" id="first-name" name="first_name" placeholder="Your first name" autocomplete="given-name" required>
-        </div>
-        <div class="form-field">
-          <label for="last-name">Last Name (required)</label>
-          <input type="text" id="last-name" name="last_name" placeholder="Your last name" autocomplete="family-name" required>
-        </div>
-        <div class="form-field">
-          <label for="email">Email Address (required)</label>
-          <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
-        </div>
-        <div class="form-field">
-          <label for="phone">Phone Number (optional)</label>
-          <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" autocomplete="tel">
-        </div>
-        <div class="form-field">
-          <label for="zip-code">ZIP Code (required, 5 digits)</label>
-          <input type="text" id="zip-code" name="zip_code" placeholder="5-digit ZIP code" inputmode="numeric" maxlength="5" pattern="[0-9]{5}" autocomplete="postal-code" required>
-        </div>
-      </section>
-
-      <section aria-labelledby="project-questions-heading">
-        <h2 id="project-questions-heading">Project Questions</h2>
-        <!-- Replace these generic example questions with project-specific questions during the hackathon. -->
-        <div class="form-field">
-          <label for="service-reason">What best describes your reason for using this service?</label>
-          <select id="service-reason" name="service_reason">
-            <option value="">Select an option</option>
-            <option value="information">I need information</option>
-            <option value="assistance">I need assistance</option>
-            <option value="volunteer">I want to volunteer</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        <fieldset class="checkbox-group">
-          <legend>What topics are you interested in?</legend>
-          <div class="checkbox-option">
-            <input type="checkbox" id="interest-community" name="interests" value="community">
-            <label for="interest-community">Community</label>
-          </div>
-          <div class="checkbox-option">
-            <input type="checkbox" id="interest-transportation" name="interests" value="transportation">
-            <label for="interest-transportation">Transportation</label>
-          </div>
-          <div class="checkbox-option">
-            <input type="checkbox" id="interest-emergency" name="interests" value="emergency_preparedness">
-            <label for="interest-emergency">Emergency Preparedness</label>
-          </div>
-          <div class="checkbox-option">
-            <input type="checkbox" id="interest-events" name="interests" value="events">
-            <label for="interest-events">Events</label>
-          </div>
-          <div class="checkbox-option">
-            <input type="checkbox" id="interest-other" name="interests" value="other">
-            <label for="interest-other">Other</label>
-          </div>
-        </fieldset>
-        <div class="form-field">
-          <label for="additional-information">Tell us more</label>
-          <textarea id="additional-information" name="additional_information" rows="4" placeholder="Share any additional details."></textarea>
-        </div>
-      </section>
-
-      <section aria-labelledby="stay-informed-heading">
-        <h2 id="stay-informed-heading">Stay Informed</h2>
-        <fieldset class="checkbox-group">
-          <legend>Communication preferences (optional)</legend>
-          <div class="checkbox-option">
-            <input type="checkbox" id="email-updates" name="email_updates" value="yes">
-            <label for="email-updates">Email updates</label>
-          </div>
-          <div class="checkbox-option">
-            <input type="checkbox" id="sms-updates" name="sms_updates" value="yes" aria-describedby="sms-consent">
-            <label for="sms-updates">SMS updates</label>
-          </div>
-          <p class="form-note" id="sms-consent">By selecting SMS updates, you agree to receive project-related text messages. Message and data rates may apply.</p>
-        </fieldset>
-      </section>
-
-      <!-- Enable this button when the Flask backend/database connection is implemented. -->
-      <button type="submit" disabled>Submit</button>
-      <p class="form-note">Demo form — data submission will be enabled when the backend is connected.</p>
-    </form>
-  </main>
-
-  <footer class="site-footer">
-    <p><strong>Houston Hackathon 2026 Starter Template</strong></p>
-    <p>Built as a reusable prototype for hackathon development.</p>
-    <nav aria-label="Footer navigation">
-      <a href="index.html">Home</a>
-      <a href="questionnaire.html">Questionnaire</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <p>Released under the <a href="../LICENSE">MIT License</a>.</p>
-    <p>© 2026 Hackathon Project Team</p>
-    <div class="footer-disclaimer">
-      <p>Prototype disclaimer: This website is a demonstration project. Information, calculations, recommendations, alerts, and outputs should be independently verified before being used for safety-critical, professional, legal, medical, engineering, emergency-response, or other regulated decisions.</p>
-      <p>Any standards, codes, regulations, datasets, APIs, or third-party services referenced by a future project remain subject to their respective owners, terms, and current requirements.</p>
-    </div>
-  </footer>
+<a class="skip" href="#main">Skip to content</a>
+<header class="header">
+<a class="brand" href="index.html">
+<img src="assets/anole.svg" alt="" width="56" height="45">anole<span class="brand-dot">▪</span>
+</a>
+<nav aria-label="Main navigation">
+<a href="index.html">Home</a>
+<a href="explore.html">Explore</a>
+<a href="questionnaire.html" aria-current="page">Capture</a>
+<a href="about.html">The idea</a>
+</nav>
+<span class="header-note">HOUSTON, TX / CONCEPT 2026</span>
+</header>
+<main id="main">
+<section class="wrap section capture-layout">
+<div class="capture-intro">
+<p class="eyebrow">CONCEPT PREVIEW / CAPTURE</p>
+<h1 class="page-title">What caught<br>your eye?</h1>
+<p class="lead">A photo. A place. A little context.</p>
+<p>Imagine leaving a useful note for the next neighbour. Shared templates make different observations easier to understand.</p>
+<div class="notice">
+<strong>Try the preview.</strong> You can change fields and review your note on this page. Nothing is saved, uploaded or sent. Reloading clears your changes.</div>
+<img class="capture-anole" src="assets/anole.svg" alt="Anole’s long tail curls upward">
+<p class="small">Anole marks community curiosity, not an official warning or a verified city report.</p>
+</div>
+<div class="capture-panel">
+<div class="panel-top">
+<strong>New observation</strong>
+<span class="badge">Concept preview</span>
+</div>
+<form id="capture-form">
+<div class="photo-placeholder">
+<span aria-hidden="true">▧</span>
+<strong>A photo would go here</strong>
+<small>Photo capture is illustrated only</small>
+</div>
+<label for="location">01 / Place</label>
+<input id="location" maxlength="120" value="Bayou path · fictional location">
+<p class="small">No GPS or pin placement in this preview.</p>
+<label for="category">02 / Observation template</label>
+<select id="category">
+<option value="walkways">Accessible walkways &amp; facilities</option>
+<option value="lighting">Street lighting</option>
+<option value="preparedness">Emergency preparedness</option>
+<option value="spaces">Cleanups &amp; community spaces</option>
+</select>
+<p id="template-hint" class="template-hint">Template attributes: surface, obstacles, ramps, last checked.</p>
+<label for="condition">03 / Observed condition</label>
+<select id="condition">
+<option>Needs a closer look</option>
+<option>Attention needed</option>
+<option>Appears in good condition</option>
+<option>Not sure</option>
+</select>
+<label for="notes">04 / What did you notice?</label>
+<textarea id="notes" maxlength="600" rows="4" placeholder="Describe what you can observe. Leave out faces, names and private details.">
+</textarea>
+<button class="button full" type="submit" disabled>Review on this page →</button>
+<p class="small">Preview only · no account · no submission</p>
+</form>
+<div id="capture-review" class="review" hidden tabindex="-1">
+<p class="eyebrow">YOUR UNSAVED PREVIEW</p>
+<h2>Your observation, at a glance.</h2>
+<dl id="review-content">
+</dl>
+<p>Not saved or shared. A future version could attach a photo, a map pin and a dated community check.</p>
+<button id="edit-preview" class="button" type="button">← Keep editing</button>
+</div>
+<noscript>
+<p>Review needs JavaScript. These fields are a mockup and cannot submit data.</p>
+</noscript>
+</div>
+</section>
+</main>
+<footer>
+<a class="brand" href="index.html">anole ▪</a>
+<p>Notice your neighbourhood.<br>
+<small>A community observation concept for Houston Hackathon 2026.</small>
+</p>
+<div>
+<a href="contact.html">Official help &amp; prototype notes ↗</a>
+<p class="small">For emergencies, call <a href="tel:911">911</a>. Anole is not an emergency service.</p>
+<a class="small" href="LICENSE.txt">MIT licence · © 2026 Johann (Hein) Ries</a>
+</div>
+</footer>
 </body>
 </html>

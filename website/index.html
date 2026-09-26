@@ -1,91 +1,139 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap">
-  <link rel="stylesheet" href="styles.css">
-  <title>Houston Hackathon Template Home</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f8f4e9">
+<meta name="description" content="Anole: a Houston community observation concept. Notice your neighbourhood.">
+<title>Notice your neighbourhood · Anole</title>
+<link rel="icon" href="assets/anole.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer>
+</script>
 </head>
 <body>
-
-  <header class="site-header">
-    <a href="index.html"><img src="logo.png" alt="Houston Hackathon 2026 placeholder logo" class="logo"></a>
-    <nav aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="questionnaire.html">Questionnaire</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <main>
-
-    <section class="hero">
-      <h1>Welcome to our Houston 2026 Home Page</h1>
-      <p>This page is created as a placeholder for the Home page of our submission</p>
-    </section>
-
-    <section>
-      <h2> PROJECT / ORGANIZATION</h2>
-      <video width="640" height="480" controls>
-        <source src="Our_story.mp4" type="video/mp4">
-        <!-- <source src="movie.ogg" type="video/ogg"> -->
-        Your browser does not support the video tag.
-
-      </video>
-      <p>A short description of the problem and what we are doing.</p>
-    </section>
-
-    <section>
-      <h2>GET STARTED</h2>
-      <h3>HOW IT WORKS</h3>
-      <ol>
-        <li>Tell us about you</li>
-        <li>We process information</li>
-        <li>Result / Action</li>
-      </ol>
-
-    </section>
-
-    <section>
-      <h2> QUICK QUESTIONNAIRE</h2>
-      <!-- Template only: add a form action and enable Submit when a backend is ready. -->
-      <form>
-        <div class="form-field">
-          <label for="fname">First name:</label>
-          <input type="text" id="fname" name="fname" value="John">
-        </div>
-        <div class="form-field">
-          <label for="lname">Last name:</label>
-          <input type="text" id="lname" name="lname" value="Doe">
-        </div>
-        <div class="form-field">
-          <label for="Zcode">ZIP Code:</label>
-          <input type="text" id="Zcode" name="Zcode" value="77063">
-        </div>
-        <input type="submit" value="Submit" disabled>
-      </form>
-
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p><strong>Houston Hackathon 2026 Starter Template</strong></p>
-    <p>Built as a reusable prototype for hackathon development.</p>
-    <nav aria-label="Footer navigation">
-      <a href="index.html">Home</a>
-      <a href="questionnaire.html">Questionnaire</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <p>Released under the <a href="../LICENSE">MIT License</a>.</p>
-    <p>© 2026 Hackathon Project Team</p>
-    <div class="footer-disclaimer">
-      <p>Prototype disclaimer: This website is a demonstration project. Information, calculations, recommendations, alerts, and outputs should be independently verified before being used for safety-critical, professional, legal, medical, engineering, emergency-response, or other regulated decisions.</p>
-      <p>Any standards, codes, regulations, datasets, APIs, or third-party services referenced by a future project remain subject to their respective owners, terms, and current requirements.</p>
-    </div>
-  </footer>
+<a class="skip" href="#main">Skip to content</a>
+<header class="header">
+<a class="brand" href="index.html">
+<img src="assets/anole.svg" alt="" width="56" height="45">anole<span class="brand-dot">▪</span>
+</a>
+<nav aria-label="Main navigation">
+<a href="index.html" aria-current="page">Home</a>
+<a href="explore.html">Explore</a>
+<a href="questionnaire.html">Capture</a>
+<a href="about.html">The idea</a>
+</nav>
+<span class="header-note">HOUSTON, TX / CONCEPT 2026</span>
+</header>
+<main id="main">
+<section class="hero wrap">
+<div class="hero-copy">
+<p class="eyebrow">
+<span class="pixel">
+</span> SMALL OBSERVATIONS. SHARED POSSIBILITIES.</p>
+<h1>Notice your<br>
+<em>neighbourhood.</em>
+</h1>
+<p class="lead">A clearer picture of Houston, one neighbour’s observation at a time.</p>
+<p>From an uneven walkway to a light that’s gone dim, Anole brings everyday details into one shared view.</p>
+<div class="actions">
+<a class="button" href="explore.html">Explore the concept <span>↗</span>
+</a>
+<a class="text-link" href="questionnaire.html">Try a capture preview →</a>
+</div>
+<p class="small">Made for Houston. Imagined with neighbours.<br>Concept demo · all observations are fictional.</p>
+</div>
+<div class="hero-visual">
+<div class="map hero-map" aria-label="Illustrated sample map, not geographic navigation">
+<span class="map-label">HOUSTON / SAMPLE MAP</span>
+<a class="pin pin-0" data-category="walkways" href="place.html#walkways" aria-label="Sample Walkways observation 01">01</a>
+<a class="pin pin-1" data-category="lighting" href="place.html#lighting" aria-label="Sample Street lighting observation 02">02</a>
+<a class="pin pin-2" data-category="preparedness" href="place.html#preparedness" aria-label="Sample Preparedness observation 03">03</a>
+<a class="pin pin-3" data-category="spaces" href="place.html#spaces" aria-label="Sample Community spaces observation 04">04</a>
+<img class="map-mascot" src="assets/anole.svg" alt="Anole, a friendly brown anole with an upward-curled tail">
+<span class="map-caption">Illustrated locations · not to scale</span>
+<span class="north" aria-hidden="true">↑<br>N</span>
+</div>
+<a class="floating-card" href="place.html#walkways">
+<span class="number">01</span>
+<div>
+<span class="eyebrow">A LITTLE DETAIL. A BIG DIFFERENCE.</span>
+<strong>A closer look at the path</strong>
+<span class="small">Walkways · sample observation</span>
+</div>
+<span>↗</span>
+</a>
+<div class="mascot-note">Meet Anole. A little curiosity goes a long way.</div>
+</div>
+</section>
+<section class="intro-strip">
+<div class="wrap strip-inner">
+<p>One neighbourhood.<br>
+<strong>More ways to see it.</strong>
+</p>
+<a href="explore.html#walkways">01 / Walkways ↗</a>
+<a href="explore.html#lighting">02 / Street lighting ↗</a>
+<a href="explore.html#preparedness">03 / Preparedness ↗</a>
+<a href="explore.html#spaces">04 / Community spaces ↗</a>
+</div>
+</section>
+<section class="wrap section split">
+<div>
+<p class="eyebrow">THE EVERYDAY INFORMATION GAP</p>
+<h2>The small things<br>don’t always make<br>the map.</h2>
+</div>
+<div>
+<p class="lead">A pin tells you where a place is.<br>A neighbour can add what it’s like.</p>
+<p>Details about surfaces, lighting and shared spaces can be scattered, missing or out of date. Anole imagines a common language for those observations, with the date and uncertainty kept in view.</p>
+<a class="text-link" href="about.html">See the idea behind Anole →</a>
+</div>
+</section>
+<section class="wrap section">
+<div class="section-heading">
+<div>
+<p class="eyebrow">A SIMPLE SHARED HABIT</p>
+<h2>Notice. Describe. Discover.</h2>
+</div>
+<span class="small">A preview of what could be.</span>
+</div>
+<div class="three">
+<article class="step">
+<span>01 / NOTICE</span>
+<h3>Start with a detail.</h3>
+<p>Imagine taking a photo and marking the place. A useful observation starts with something specific.</p>
+</article>
+<article class="step">
+<span>02 / DESCRIBE</span>
+<h3>Give it context.</h3>
+<p>Choose a shared template. Add the condition, useful attributes and when you checked.</p>
+</article>
+<article class="step">
+<span>03 / DISCOVER</span>
+<h3>See the bigger picture.</h3>
+<p>Explore what neighbours notice. Check current conditions and follow official channels when needed.</p>
+</article>
+</div>
+</section>
+<section class="wrap end-banner">
+<img src="assets/anole.svg" alt="Anole the brown anole">
+<div>
+<p class="eyebrow">CURIOUS ABOUT YOUR CORNER?</p>
+<h2>Take a look around.</h2>
+<p>Four sample observations. One shared interface.</p>
+</div>
+<a class="button" href="explore.html">Open sample map ↗</a>
+</section>
+</main>
+<footer>
+<a class="brand" href="index.html">anole ▪</a>
+<p>Notice your neighbourhood.<br>
+<small>A community observation concept for Houston Hackathon 2026.</small>
+</p>
+<div>
+<a href="contact.html">Official help &amp; prototype notes ↗</a>
+<p class="small">For emergencies, call <a href="tel:911">911</a>. Anole is not an emergency service.</p>
+<a class="small" href="LICENSE.txt">MIT licence · © 2026 Johann (Hein) Ries</a>
+</div>
+</footer>
 </body>
 </html>

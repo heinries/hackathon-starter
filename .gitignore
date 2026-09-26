@@ -216,3 +216,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local questionnaire database and SQLite sidecar files
+backend/data/*.db
+backend/data/*.db-*

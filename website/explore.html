@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f8f4e9">
+<meta name="description" content="Anole: a Houston community observation concept. Notice your neighbourhood.">
+<title>Explore · Anole</title>
+<link rel="icon" href="assets/anole.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer>
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="header">
+<a class="brand" href="index.html">
+<img src="assets/anole.svg" alt="" width="56" height="45">anole<span class="brand-dot">▪</span>
+</a>
+<nav aria-label="Main navigation">
+<a href="index.html">Home</a>
+<a href="explore.html" aria-current="page">Explore</a>
+<a href="questionnaire.html">Capture</a>
+<a href="about.html">The idea</a>
+</nav>
+<span class="header-note">HOUSTON, TX / CONCEPT 2026</span>
+</header>
+<main id="main">
+<section class="wrap section">
+<p class="eyebrow">THE NEIGHBOURHOOD NOTEBOOK</p>
+<div class="section-heading">
+<div>
+<h1 class="page-title">Every detail has a place.</h1>
+<p>Explore the things a neighbour might notice.</p>
+</div>
+<a class="button" href="questionnaire.html">+ Capture preview</a>
+</div>
+<div class="notice">
+<strong>Sample data only.</strong> Fictional places, dates and conditions. Nothing here is verified or suitable for route or emergency planning.</div>
+<div class="filters" aria-label="Filter observations">
+<button data-filter="all" aria-pressed="true">All observations</button>
+<button data-filter="walkways" aria-pressed="false">Walkways</button>
+<button data-filter="lighting" aria-pressed="false">Street lighting</button>
+<button data-filter="preparedness" aria-pressed="false">Preparedness</button>
+<button data-filter="spaces" aria-pressed="false">Community spaces</button>
+</div>
+<noscript>
+<p>Filtering needs JavaScript. All four sample observations are shown below.</p>
+</noscript>
+<div class="explore-grid">
+<div class="map " aria-label="Illustrated sample map, not geographic navigation">
+<span class="map-label">HOUSTON / SAMPLE MAP</span>
+<a class="pin pin-0" data-category="walkways" href="place.html#walkways" aria-label="Sample Walkways observation 01">01</a>
+<a class="pin pin-1" data-category="lighting" href="place.html#lighting" aria-label="Sample Street lighting observation 02">02</a>
+<a class="pin pin-2" data-category="preparedness" href="place.html#preparedness" aria-label="Sample Preparedness observation 03">03</a>
+<a class="pin pin-3" data-category="spaces" href="place.html#spaces" aria-label="Sample Community spaces observation 04">04</a>
+<img class="map-mascot" src="assets/anole.svg" alt="Anole, a friendly brown anole with an upward-curled tail">
+<span class="map-caption">Illustrated locations · not to scale</span>
+<span class="north" aria-hidden="true">↑<br>N</span>
+</div>
+<div>
+<div class="list-heading">
+<strong>Neighbourhood observations</strong>
+<span id="result-count" role="status">4 samples</span>
+</div>
+<div class="cards">
+<a class="observation" data-category="walkways" href="place.html#walkways">
+<span class="number walkways">01</span>
+<div>
+<span class="eyebrow">Walkways <span class="sample-word">/ SAMPLE</span>
+</span>
+<h3>A closer look at the path</h3>
+<p>Bayou path · fictional location</p>
+<span class="condition">Uneven surface</span>
+</div>
+<span class="arrow" aria-hidden="true">↗</span>
+</a>
+<a class="observation" data-category="lighting" href="place.html#lighting">
+<span class="number lighting">02</span>
+<div>
+<span class="eyebrow">Street lighting <span class="sample-word">/ SAMPLE</span>
+</span>
+<h3>A light that needs a look</h3>
+<p>Neighbourhood corner · fictional location</p>
+<span class="condition">Dim light</span>
+</div>
+<span class="arrow" aria-hidden="true">↗</span>
+</a>
+<a class="observation" data-category="preparedness" href="place.html#preparedness">
+<span class="number preparedness">03</span>
+<div>
+<span class="eyebrow">Preparedness <span class="sample-word">/ SAMPLE</span>
+</span>
+<h3>A place to ask about cooling</h3>
+<p>Community room · fictional location</p>
+<span class="condition">Needs verification</span>
+</div>
+<span class="arrow" aria-hidden="true">↗</span>
+</a>
+<a class="observation" data-category="spaces" href="place.html#spaces">
+<span class="number spaces">04</span>
+<div>
+<span class="eyebrow">Community spaces <span class="sample-word">/ SAMPLE</span>
+</span>
+<h3>Room for a little care</h3>
+<p>Pocket green · fictional location</p>
+<span class="condition">Litter observed</span>
+</div>
+<span class="arrow" aria-hidden="true">↗</span>
+</a>
+</div>
+<p class="small">All sample dates: 24 September 2026 · Unverified</p>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<a class="brand" href="index.html">anole ▪</a>
+<p>Notice your neighbourhood.<br>
+<small>A community observation concept for Houston Hackathon 2026.</small>
+</p>
+<div>
+<a href="contact.html">Official help &amp; prototype notes ↗</a>
+<p class="small">For emergencies, call <a href="tel:911">911</a>. Anole is not an emergency service.</p>
+<a class="small" href="LICENSE.txt">MIT licence · © 2026 Johann (Hein) Ries</a>
+</div>
+</footer>
+</body>
+</html>
